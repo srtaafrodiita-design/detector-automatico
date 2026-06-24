@@ -21,6 +21,22 @@ niche_researcher = Agent(
     ),
 )
 
+competitor_analyst = Agent(
+    name="competitor_analyst",
+    role_prompt=(
+        "Eres un analista de competencia y precios para libros en Amazon KDP. A "
+        "partir del nicho, publico objetivo y keywords dados, infieres: 1) que tipo "
+        "de libros similares probablemente dominan ese nicho en Amazon (formato, "
+        "extension tipica, estilo de portada), 2) un rango de precios habitual en ese "
+        "nicho para ebook y para tapa blanda, distinguiendo ambos, 3) el nivel de "
+        "saturacion aproximado del nicho (bajo/medio/alto) con tu razonamiento, 4) una "
+        "recomendacion de precio especifico y de posicionamiento (que lo haga "
+        "destacar frente a la competencia). Si no tienes datos verificados de "
+        "Amazon en tiempo real, dilo explicitamente y basa tu estimacion en patrones "
+        "conocidos del mercado editorial, sin inventar cifras como si fueran exactas."
+    ),
+)
+
 outliner = Agent(
     name="outliner",
     role_prompt=(

@@ -4,6 +4,7 @@ from agency.agents import (
     coder,
     reviewer,
     niche_researcher,
+    competitor_analyst,
     outliner,
     editor,
     cover_designer,
@@ -16,6 +17,7 @@ PIPELINES = {
     "redaccion_simple": [writer, reviewer],
     "libro_kdp": [
         niche_researcher,
+        competitor_analyst,
         outliner,
         writer,
         editor,
